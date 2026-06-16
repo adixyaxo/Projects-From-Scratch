@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aditya Dagar — Research Portfolio</title>
+  <meta name="description"
+    content="Systems engineering research built from first principles. HTTP servers, cryptographic protocols, and networking architecture from RFC specifications." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Mono:wght@400;500&family=UnifrakturMaguntia&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- Static newsprint texture (no animation) -->
+  <div class="texture-layer" aria-hidden="true">
+    <div class="texture-halftone"></div>
+    <div class="texture-grain"></div>
+    <div class="texture-fiber"></div>
+  </div>
+  <div class="paper-background" aria-hidden="true"></div>
+
+  <!-- Subtle binder holes -->
+  <div class="binder-holes" aria-hidden="true">
+    <span class="binder-hole"></span>
+    <span class="binder-hole"></span>
+    <span class="binder-hole"></span>
+  </div>
+
+  <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
+    <filter id="rough-edges">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </svg>
+
+  <!-- Scroll minimap rail -->
+  <div class="scroll-rail" aria-hidden="true">
+    <div class="scroll-rail__lines" id="scroll-rail-lines"></div>
+    <div class="scroll-rail__indicator">
+      <span class="scroll-rail__caret"></span>
+      <span class="scroll-rail__highlight"></span>
+    </div>
+  </div>
+
+  <div class="site-wrapper">
+
+    <!-- Masthead -->
+    <header class="masthead">
+      <div class="masthead-rule masthead-rule--top"></div>
+      <nav class="masthead-nav" aria-label="Site navigation">
+        <div class="masthead-meta">
+          <span class="meta-date" id="issue-date"></span>
+          <span class="meta-sep" aria-hidden="true">·</span>
+          <span class="meta-location">Gurgaon, IN</span>
+        </div>
+        <a href="#" class="masthead-logo">
+          <span class="logo-small">The</span>
+          <span class="logo-display">Research</span>
+          <span class="logo-small">Portfolio</span>
+        </a>
+        <div class="masthead-links">
+          <a href="#research">Index</a>
+          <a href="#methodology">About</a>
+          <a href="https://github.com/adixyaxo" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </nav>
+      <div class="masthead-rule masthead-rule--bottom"></div>
+    </header>
+
+    <main class="grid">
+
+      <!-- §01 Hero -->
+      <section class="cell cell-hero" aria-labelledby="hero-title">
+        <div class="hero-block">
+          <h1 class="hero-word" id="hero-title">RESEARCH</h1>
+          <!-- Decorative Sketch: Arrow pointing at RESEARCH -->
+          <div class="sketch-mark sketch-hero-arrow" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10,80 Q40,90 70,30 M60,30 L75,25 L80,45" />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <aside class="cell cell-contact" aria-label="Contact">
+        <ul class="contact-fields-minimal">
+          <li>Aditya Dagar</li>
+          <li>Systems Eng.</li>
+          <li>NorthCap Univ.</li>
+          <li>Gurgaon, IN</li>
+          <li><a href="https://github.com/adixyaxo" target="_blank" rel="noopener">@adixyaxo</a></li>
+        </ul>
+      </aside>
+
+      <!-- §02 Intro row -->
+      <section class="cell cell-intro">
+        <p class="label">Upcoming Next</p>
+        <h2 class="title-sm">Fresh Entry</h2>
+        <p class="body-text dropcap">A selected work from the research archive — systems built without libraries,
+          reading specifications as primary source material.</p>
+        <a href="#project-03" class="link-minimal">View SHA-256 →</a>
+      </section>
+
+      <figure class="cell cell-figure">
+        <div class="figure-border">
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 380'%3E%3Crect fill='%23EDE8DF' width='600' height='380'/%3E%3Ctext x='300' y='170' font-family='Georgia' font-size='22' fill='%23111' text-anchor='middle'%3EFig. 1%3C/text%3E%3Ctext x='300' y='200' font-family='Georgia' font-size='14' fill='%23555' text-anchor='middle'%3EHTTP Request Cycle%3C/text%3E%3Cpath d='M60 280 L180 230 L300 265 L420 210 L540 250' stroke='%23111' stroke-width='1.5' fill='none'/%3E%3Ccircle cx='180' cy='230' r='4' fill='%23111'/%3E%3Ccircle cx='300' cy='265' r='4' fill='%23111'/%3E%3Ccircle cx='420' cy='210' r='4' fill='%23111'/%3E%3C/svg%3E"
+            alt="Fig. 1 — HTTP request lifecycle diagram" width="600" height="380" />
+        </div>
+        <figcaption class="figure-note">
+          <span class="fig-label">Fig. 01</span>
+          HTTP/1.0 Server — socket lifecycle, RFC 1945.
+        </figcaption>
+      </figure>
+
+      <div class="cell cell-principle" aria-hidden="true">
+        <p class="principle-word">THINK,</p>
+        <p class="principle-word">CREATE,</p>
+        <p class="principle-word principle-word--dim">DELIVER</p>
+      </div>
+
+      <div class="cell cell-separator" aria-hidden="true">
+        <span>Read the spec. Write the code. Own the behaviour.</span>
+      </div>
+
+      <!-- §03 Projects — Miranda 3-column -->
+      <article class="cell cell-project" id="project-01">
+        <div class="project-visual">
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 400'%3E%3Crect fill='%238B7355' width='640' height='400'/%3E%3Ctext x='320' y='200' font-family='Georgia' font-size='20' fill='%23EBE7DE' text-anchor='middle'%3EHTTP Server%3C/text%3E%3C/svg%3E"
+            alt="HTTP/1.0 Web Server" width="640" height="400" />
+        </div>
+        <div class="project-info">
+          <div class="project-head">
+            <h3 class="project-name">HTTP SERVER</h3>
+            <span class="tag-new">NEW</span>
+          </div>
+          <p class="body-text">Berkeley sockets. Request parsing, static files, status dispatch. Pure C.</p>
+          <a href="https://github.com/adixyaxo" target="_blank" rel="noopener" class="link-minimal">Source ↗</a>
+        </div>
+      </article>
+
+      <section class="cell cell-all-work" id="research" style="position: relative;">
+        <h2 class="work-banner">ALL WORK!</h2>
+        <p class="body-text">A featured selection of research — built from first principles over the last years.</p>
+        <p class="work-tip">TIP! Scroll to navigate</p>
+      </section>
+
+      <article class="cell cell-project" id="project-02">
+        <div class="project-visual">
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 400'%3E%3Crect fill='%231A1814' width='640' height='400'/%3E%3Ctext x='320' y='195' font-family='monospace' font-size='24' fill='%23F3F0EA' text-anchor='middle'%3EConcurrent%3C/text%3E%3Ctext x='320' y='230' font-family='monospace' font-size='12' fill='%23888' text-anchor='middle'%3EHTTP/1.1 · C++17%3C/text%3E%3C/svg%3E"
+            alt="Concurrent HTTP/1.1 Server" width="640" height="400" />
+        </div>
+        <div class="project-info">
+          <div class="project-head">
+            <h3 class="project-name">CONCURRENT SERVER</h3>
+            <span class="tag-new">NEW</span>
+          </div>
+          <p class="body-text">Thread-per-connection. Keep-alive, chunked encoding, RAII semantics.</p>
+          <a href="https://github.com/adixyaxo" target="_blank" rel="noopener" class="link-minimal">Source ↗</a>
+        </div>
+      </article>
+
+      <!-- §04 Divider band -->
+      <div class="cell cell-band" aria-hidden="true">
+        <span class="band-word">SPECIFICATION</span>
+      </div>
+
+      <!-- §05 Statistics -->
+      <!-- §05 Statistics -->
+      <div class="cell stat">
+        <span class="stat-eyebrow">Lines of</span>
+        <span class="stat-title">Code</span>
+        <div class="sketch-mark sketch-circle" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round">
+            <path d="M50,5 C80,3 95,15 90,30 C85,45 60,48 50,45 C30,40 5,35 10,20 C15,5 30,8 50,5 Z" />
+          </svg>
+        </div>
+        <span class="stat-value" id="loc-counter">1,410</span>
+      </div>
+      <div class="cell stat">
+        <span class="stat-eyebrow">Site of the</span>
+        <span class="stat-title">Projects</span>
+        <span class="stat-value">3</span>
+      </div>
+      <div class="cell stat">
+        <span class="stat-eyebrow">RFC &amp; FIPS</span>
+        <span class="stat-title">Specs</span>
+        <span class="stat-value">4</span>
+      </div>
+      <div class="cell stat">
+        <span class="stat-eyebrow">Primary</span>
+        <span class="stat-title">Languages</span>
+        <span class="stat-value">2</span>
+      </div>
+
+      <!-- §06 Project dossiers -->
+      <section class="cell cell-dossier" id="project-01-dossier">
+        <span class="featured-vertical" aria-hidden="true">I</span>
+        <figure class="featured-inner">
+          <div class="figure-border">
+            <img
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 560'%3E%3Crect fill='%23DDD4C5' width='480' height='560'/%3E%3Ctext x='240' y='180' font-family='Georgia' font-size='20' fill='%23111' text-anchor='middle'%3EHTTP/1.0 Request Path%3C/text%3E%3Crect x='70' y='230' width='120' height='42' fill='none' stroke='%23111'/%3E%3Crect x='180' y='310' width='120' height='42' fill='none' stroke='%23111'/%3E%3Crect x='290' y='230' width='120' height='42' fill='none' stroke='%23111'/%3E%3Cline x1='190' y1='251' x2='290' y2='251' stroke='%23111'/%3E%3Cline x1='300' y1='310' x2='300' y2='272' stroke='%23111'/%3E%3Ctext x='130' y='256' font-family='monospace' font-size='10' fill='%23111' text-anchor='middle'%3Eparse%3C/text%3E%3Ctext x='240' y='336' font-family='monospace' font-size='10' fill='%23111' text-anchor='middle'%3Eroute%3C/text%3E%3Ctext x='350' y='256' font-family='monospace' font-size='10' fill='%23111' text-anchor='middle'%3Erespond%3C/text%3E%3C/svg%3E"
+              alt="HTTP server request lifecycle poster" width="480" height="560" />
+          </div>
+          <figcaption>
+            <span class="project-index">01</span>
+            <h3 class="title-sm">HTTP/1.0 Web Server</h3>
+            <p class="body-text">RFC 1945 implementation with manual parser, filesystem mapping, and robust status
+              handling.</p>
+          </figcaption>
+        </figure>
+      </section>
+
+      <article class="cell cell-dossier-content">
+        <p class="label">Project Notes</p>
+        <h2 class="title-md">Socket Lifecycle, Carefully Implemented.</h2>
+        <div class="method-body">
+          <p>The server follows a deterministic flow: socket creation, bind, listen, accept, parse, route, and respond.
+            Every stage has explicit error handling and RFC-aware validation.</p>
+          <p>It emphasizes predictable behavior under malformed requests and path traversal checks during filesystem
+            resolution.</p>
+        </div>
+        <ul class="spec-tags" aria-label="HTTP server highlights">
+          <li>Request-Line Parser</li>
+          <li>Header Scanner</li>
+          <li>Status Dispatch</li>
+          <li>Static File I/O</li>
+        </ul>
+      </article>
+
+      <section class="cell cell-dossier" id="project-02-dossier">
+        <span class="featured-vertical" aria-hidden="true">II</span>
+        <figure class="featured-inner">
+          <div class="figure-border">
+            <img
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 560'%3E%3Crect fill='%23D8D0C2' width='480' height='560'/%3E%3Ctext x='240' y='170' font-family='Georgia' font-size='20' fill='%23111' text-anchor='middle'%3EConcurrency Model%3C/text%3E%3Cline x1='240' y1='220' x2='240' y2='420' stroke='%23111' stroke-width='1'/%3E%3Cline x1='100' y1='280' x2='380' y2='280' stroke='%23111' stroke-width='1'/%3E%3Cline x1='100' y1='350' x2='380' y2='350' stroke='%23111' stroke-width='1'/%3E%3Ccircle cx='240' cy='220' r='16' fill='none' stroke='%23111'/%3E%3Ctext x='240' y='225' font-family='monospace' font-size='9' fill='%23111' text-anchor='middle'%3Eaccept%3C/text%3E%3Ctext x='80' y='283' font-family='monospace' font-size='9' fill='%23111'%3Eth-1%3C/text%3E%3Ctext x='80' y='353' font-family='monospace' font-size='9' fill='%23111'%3Eth-n%3C/text%3E%3C/svg%3E"
+              alt="Concurrent server threading poster" width="480" height="560" />
+          </div>
+          <figcaption>
+            <span class="project-index">02</span>
+            <h3 class="title-sm">Concurrent HTTP/1.1 Server</h3>
+            <p class="body-text">Thread-per-connection with keep-alive semantics, transfer encoding, and RAII-driven
+              cleanup paths.</p>
+          </figcaption>
+        </figure>
+      </section>
+
+      <article class="cell cell-dossier-content">
+        <p class="label">Project Notes</p>
+        <h2 class="title-md">RAII Meets Protocol Correctness.</h2>
+        <div class="method-body">
+          <p>Connection objects own socket lifetimes and transfer ownership to worker threads using move semantics. This
+            approach avoids leaks under failure and keeps teardown explicit.</p>
+          <p>Persistent connections and chunked responses were tested with realistic client behavior to validate
+            protocol compliance under parallel load.</p>
+        </div>
+        <ul class="spec-tags" aria-label="Concurrent server highlights">
+          <li>Thread-per-Connection</li>
+          <li>Keep-Alive</li>
+          <li>Chunked Encoding</li>
+          <li>RAII Ownership</li>
+        </ul>
+      </article>
+
+      <section class="cell cell-dossier" id="project-03">
+        <span class="featured-vertical" aria-hidden="true">III</span>
+        <figure class="featured-inner" style="position: relative;">
+          <div class="figure-border">
+            <img
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 560'%3E%3Crect fill='%23E5DDD0' width='480' height='560'/%3E%3Ctext x='240' y='260' font-family='Georgia' font-size='22' fill='%23111' text-anchor='middle'%3ESHA-256%3C/text%3E%3Ctext x='240' y='290' font-family='Georgia' font-size='12' fill='%23555' text-anchor='middle'%3EFIPS 180-4%3C/text%3E%3Cline x1='120' y1='360' x2='360' y2='360' stroke='%23111' stroke-width='1'/%3E%3Cline x1='120' y1='380' x2='300' y2='380' stroke='%23111' stroke-width='0.5' opacity='0.4'/%3E%3Cline x1='120' y1='400' x2='340' y2='400' stroke='%23111' stroke-width='0.5' opacity='0.4'/%3E%3C/svg%3E"
+              alt="SHA-256 cryptographic hash" width="480" height="560" />
+          </div>
+          <figcaption>
+            <span class="project-index">03</span>
+            <h3 class="title-sm">SHA-256 Hash</h3>
+            <p class="body-text">FIPS 180-4 implementation. 64-round compression, deterministic message schedule, and
+              NIST vectors.</p>
+          </figcaption>
+        </figure>
+      </section>
+
+      <article class="cell cell-dossier-content" id="methodology" style="position: relative;">
+        <div class="sketch-mark sketch-underline" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 20" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round">
+            <path d="M5,10 Q50,5 100,12 T145,10" />
+          </svg>
+        </div>
+        <p class="label">Methodology</p>
+        <h2 class="title-md">No libraries.<br>No shortcuts.<br>Just the spec.</h2>
+        <div class="method-body">
+          <p class="dropcap">Each project began with the original specification — RFC, POSIX, or NIST — implemented
+            without external dependencies.</p>
+          <p>Goal: <em>deep understanding</em> at the protocol level, and code that handles edge cases through
+            specification adherence.</p>
+        </div>
+        <ul class="spec-tags" aria-label="Specifications referenced">
+          <li>RFC 1945</li>
+          <li>RFC 7230</li>
+          <li>FIPS 180-4</li>
+          <li>POSIX</li>
+        </ul>
+      </article>
+
+      <!-- §06 Research gallery -->
+      <figure class="cell gallery-card">
+        <div class="figure-border">
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 560 360'%3E%3Crect fill='%23E1D9CA' width='560' height='360'/%3E%3Ctext x='280' y='170' font-family='Georgia' font-size='18' fill='%23111' text-anchor='middle'%3EMemory Profiling Snapshot%3C/text%3E%3Ctext x='280' y='198' font-family='monospace' font-size='11' fill='%23555' text-anchor='middle'%3EValgrind · Leak Summary%3C/text%3E%3C/svg%3E"
+            alt="Valgrind memory profiling poster" width="560" height="360" />
+        </div>
+        <figcaption class="figure-note"><span class="fig-label">Fig. 04</span>Leak checks and ownership verification
+          for server resources.</figcaption>
+      </figure>
+      <figure class="cell gallery-card">
+        <div class="figure-border">
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 560 360'%3E%3Crect fill='%23DED5C6' width='560' height='360'/%3E%3Ctext x='280' y='170' font-family='Georgia' font-size='18' fill='%23111' text-anchor='middle'%3EHTTP Header Parsing%3C/text%3E%3Ctext x='280' y='198' font-family='monospace' font-size='11' fill='%23555' text-anchor='middle'%3ECRLF Delimiter Scan%3C/text%3E%3C/svg%3E"
+            alt="HTTP header parsing research poster" width="560" height="360" />
+        </div>
+        <figcaption class="figure-note"><span class="fig-label">Fig. 05</span>Header boundary detection and malformed
+          input handling.</figcaption>
+      </figure>
+      <figure class="cell gallery-card">
+        <div class="figure-border">
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 560 360'%3E%3Crect fill='%23E7DFD2' width='560' height='360'/%3E%3Ctext x='280' y='170' font-family='Georgia' font-size='18' fill='%23111' text-anchor='middle'%3ESHA-256 Round Visual%3C/text%3E%3Ctext x='280' y='198' font-family='monospace' font-size='11' fill='%23555' text-anchor='middle'%3ECH · MAJ · ROTR%3C/text%3E%3C/svg%3E"
+            alt="SHA-256 round operation poster" width="560" height="360" />
+        </div>
+        <figcaption class="figure-note"><span class="fig-label">Fig. 06</span>Bitwise round operations and digest
+          state evolution.</figcaption>
+      </figure>
+
+      <!-- §07 Technical notes -->
+      <article class="cell cell-note">
+        <span class="note-num">01</span>
+        <h3 class="title-sm">HTTP/1.0</h3>
+        <ul class="note-list">
+          <li>State machine request-line parsing</li>
+          <li>CRLF header delimiters, RFC 1945 §5</li>
+          <li>Status codes 200, 400, 404, 500</li>
+          <li>~420 lines C, zero dependencies</li>
+        </ul>
+      </article>
+
+      <article class="cell cell-note">
+        <span class="note-num">02</span>
+        <h3 class="title-sm">HTTP/1.1</h3>
+        <ul class="note-list">
+          <li>Thread-per-connection model</li>
+          <li>Keep-alive, RFC 7230 §6.3</li>
+          <li>RAII socket ownership</li>
+          <li>~680 lines C++17</li>
+        </ul>
+      </article>
+
+      <article class="cell cell-note">
+        <span class="note-num">03</span>
+        <h3 class="title-sm">SHA-256</h3>
+        <ul class="note-list">
+          <li>512-bit message padding</li>
+          <li>CH, MAJ, ROTR bit operations</li>
+          <li>NIST vectors A.1–A.3</li>
+          <li>~310 lines C</li>
+        </ul>
+      </article>
+
+      <!-- §08 Manifesto -->
+      <blockquote class="cell cell-manifesto">
+        <p class="manifesto-quote">"Read the spec. Write the code. Own the behaviour."</p>
+      </blockquote>
+
+      <!-- §09 Footer -->
+      <div class="cell footer-band" aria-hidden="true">
+        <span>SYSTEMS</span>
+      </div>
+      <div class="cell footer-cta">
+        <div class="sketch-mark sketch-cta-arrow" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10,90 Q40,50 80,20 M60,15 L85,15 L85,40" />
+          </svg>
+        </div>
+        <p class="footer-cta-text">Let's build something together</p>
+        <a href="https://github.com/adixyaxo" target="_blank" rel="noopener" class="btn-pill">VIEW GITHUB ↗</a>
+      </div>
+      <footer class="cell footer-body">
+        <p class="footer-author">Aditya Dagar</p>
+        <p class="footer-line">Built from first principles.</p>
+        <nav class="footer-nav" aria-label="External links">
+          <a href="https://github.com/adixyaxo" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://aditya-dagar.vercel.app" target="_blank" rel="noopener">Portfolio</a>
+          <a href="https://linkedin.com/in/adixyaxoo" target="_blank" rel="noopener">LinkedIn</a>
+        </nav>
+        <p class="footer-tools">GCC · POSIX · Valgrind · GNU Make · Linux</p>
+        <p class="footer-year"><span id="current-year"></span></p>
+      </footer>
+
+    </main>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
