@@ -494,7 +494,7 @@ img { display: block; max-width: 100%; height: auto; }
   transform: scale(1.02); /* Fallback if JS fails */
   z-index: 50;
   position: relative;
-  box-shadow: 
+  box-shadow:
     0 40px 80px rgba(0,0,0,0.15),
     0 15px 30px rgba(0,0,0,0.08),
     inset 0 1px 1px rgba(255,255,255,0.2);
@@ -1040,10 +1040,13 @@ img { display: block; max-width: 100%; height: auto; }
 }
 
 .gallery-card {
-  grid-column: span 4;
   background: var(--bg);
   padding: clamp(1.5rem, 3vw, 2.5rem);
   position: relative;
+}
+
+.cell-gallery .gallery-card {
+  grid-column: auto;
 }
 
 .gallery-card .figure-border {
@@ -1307,16 +1310,153 @@ html { scrollbar-width: none; }
     flex-direction: column;
     gap: var(--gap);
   }
-  
-  .cell-contact {
-    min-height: auto;
-    padding: 3rem var(--pad);
+
+  .cell,
+  .cell-gallery,
+  .cell-footer,
+  .cell-manifesto {
+    padding: clamp(1.25rem, 2.5vw, 2rem);
   }
-  
-  .principle-word {
-    font-size: 22vw;
+
+  .cell-hero,
+  .cell-contact,
+  .cell-intro,
+  .cell-figure,
+  .cell-principle,
+  .cell-project,
+  .cell-dossier,
+  .cell-dossier-content,
+  .cell-gallery,
+  .cell-note,
+  .footer-cta,
+  .footer-body {
+    min-height: auto;
+  }
+
+  .hero-word {
+    font-size: clamp(5.5rem, 18vw, 12rem);
+  }
+
+  .contact-fields-minimal {
+    font-size: clamp(1.6rem, 5vw, 2.8rem);
+  }
+
+  .project-info {
+    padding: 1.5rem 1rem;
+  }
+
+  .work-banner {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .work-tip {
+    margin-top: 1rem;
   }
 }
+
+@media (max-width: 680px) {
+  :root { --nav-h: 64px; }
+
+  .binder-holes { display: none; }
+
+  .masthead-nav {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 0.75rem var(--pad-sm);
+    text-align: center;
+  }
+
+  .masthead-meta,
+  .masthead-logo,
+  .masthead-links { justify-self: center; }
+
+  .masthead-links {
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .cell-hero,
+  .cell-contact,
+  .cell-intro,
+  .cell-figure,
+  .cell-principle,
+  .cell-all-work,
+  .cell-project,
+  #project-01,
+  #project-02,
+  .cell-band,
+  .cell-stats,
+  .cell-dossier,
+  .cell-dossier-content,
+  .cell-gallery,
+  .cell-note,
+  .cell-manifesto,
+  .cell-footer {
+    grid-column: 1 / 13;
+  }
+
+  .cell-stats { grid-template-columns: 1fr 1fr; }
+  .cell-dossier { grid-template-columns: 1fr; min-height: auto; }
+
+  .featured-vertical {
+    writing-mode: horizontal-tb;
+    transform: none;
+    border-right: none;
+    border-bottom: 1px solid var(--rule);
+    padding: 1rem var(--pad-sm);
+    font-size: 4rem;
+  }
+
+  .cell-gallery {
+    grid-template-columns: 1fr;
+    padding: 1.5rem var(--pad-sm);
+  }
+
+  .gallery-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .hero-word {
+    font-size: clamp(5rem, 20vw, 9rem);
+  }
+
+  .cell-contact {
+    padding: 2rem var(--pad-sm);
+  }
+
+  .cell-all-work {
+    padding: 1.5rem var(--pad-sm);
+  }
+
+  .work-banner {
+    font-size: clamp(1.8rem, 7vw, 2.6rem);
+  }
+
+  .note-list li {
+    padding: 0.35rem 0;
+  }
+
+  .footer-cta {
+    padding: 2rem 1.5rem;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .footer-tools,
+  .footer-year,
+  .footer-line {
+    font-size: 0.85rem;
+  }
+
+  .cell-manifesto {
+    padding: 2rem 1.5rem;
+  }
+}
+
 
 @media (max-width: 680px) {
   :root { --nav-h: 64px; }
